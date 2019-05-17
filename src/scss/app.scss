@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+@import 
+    './reset.scss';
+
+//▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+// _Body
+//▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+body, html{
+    height: 100%;
+}
+
+body{
+    background: #24C6DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #514A9D, #24C6DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #514A9D, #24C6DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+//▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+// _Container
+//▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+.container{
+    position: relative;
+    max-width: 1280px;
+    width: 100%;
+    padding: 0 40px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+//▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+// _Headings
+//▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+h1{
+    font-family: 'Roboto';
+    font-size: 3.125em;
+    line-height: 1.1em;
+}
+
+h2{
+    font-family: 'Roboto';
+    font-size: 2.8125em;
+    line-height: 1.1em; 
+}
+
+h3{
+    font-family: 'Roboto';
+    font-size: 2.5em;
+    line-height: 1.1em;
+}
+
+h4{
+    font-family: 'Roboto';
+    font-size: 1.875em;
+    line-height: 1.1em;
+}
+
+h6{
+    font-family: 'Roboto';
+    font-size: 1.25em;
+    font-weight: 500;
+    line-height: 1.1em;
+}
+
+p{
+    font-family: 'Roboto';
+    font-size: 1.125em;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+
+
+//▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+// _Header
+//▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(black, 0.5);
+    z-index: 5;
+
+    
+    &__logo{
+        padding: 15px 0;
+        a{
+            display: inline-block;
+            height: 70px;
+            
+            img{
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+}
+
+//▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+// _Search
+//▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+.book__search{
+    transition: all 0.35s ease-in-out;
+    position: relative;
+    width: 500px;
+    padding: 40px;
+    transform: translate(0%, 100%); 
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(black, 0.4);
+    background-color: white;
+    box-sizing: border-box;
+    margin: 0 auto;
+
+    &--relative{
+        width: 100%;
+        border-radius: 0px;
+        box-shadow: none;
+        transform: translate(0%, 0%);
+        transform-origin: 50% 50%;
+    }
+
+    h2{
+        padding-bottom: 10px;
+        text-align: center;
+        color: #1488CC;
+    }
+
+    &Wrapper{
+        margin-top: 40px;
+        text-align: center;
+
+        input[type="text"]{
+            display: block;
+            width: 100%;
+            height: 50px;
+            padding: 0 20px;
+            
+            font-family: 'Roboto';
+            font-size: 1.125em;
+            color: #001f3f;
+            text-align: center;
+            border-radius: 15px;
+            box-sizing: border-box;
+            box-shadow: 0 0 10px rgba(black, 0.4);
+        }
+
+        input[type="submit"]{
+            padding: 15px 40px;
+            margin-top: 30px;
+            font-family: 'Roboto';
+            font-size: 1.125em;
+            color: white;
+            text-transform: uppercase;
+            background-color: #1488CC;
+            border-radius: 15px;
+        }
+    }
+}
+
+//▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+// _BookResults
+//▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+.book__results{
+    margin: 50px 0;
+    transition: opacity 0.35s ease-in-out;
+    overflow: hidden;
+    
+
+    &--hide{
+        opacity: 0;
+    }
+
+    &--show{
+        transition-delay: 1s;
+        opacity: 1;
+    }
+
+    .book__list{
+        list-style: none;
+        &:after{
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        &--item{
+            position: relative;
+            float: left;
+            width: calc(20% - 16px);
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            margin-right: 20px;
+            cursor: pointer;
+
+            &:before{
+                transition: all 0.35s ease-in-out;
+                content: '';
+                position: absolute;
+                top:50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transform-origin: 50% 50%;
+                width: 0;
+                height: 0;
+                background-color: white;
+            }
+
+            &:hover{
+                &:before{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+
+            &:nth-child(5n){
+                margin-right: 0px;
+            }
+
+            &:nth-child(5) ~ *{
+                margin-top: 20px;
+            }
+
+            // &:not(:first-child){
+            //     margin-top: 25px;
+            // }
+
+            img{
+                transition: padding 0.35s ease-in-out;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                max-width:100%;
+                max-height: 100%;
+                width: auto;
+                height: auto;
+                transform: translate(-50%, -50%);
+            }
+
+            h4{
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 25px;
+                color: #aaa;
+            }
+
+            &:nth-child(5n - 1),
+            &:nth-child(5n){
+                .book__details{
+                    padding: 20px 200px 20px 50px;
+                    left: inherit;
+                    right: 0;
+                }
+            }
+
+            ul{
+                list-style: none;
+                margin-top: 30px;
+
+                &:after{
+                    content: '';
+                    display: table;
+                    clear: both;
+                }
+
+                li{
+                    float: left;
+                    width: calc(33.3333% - 14px);
+                    margin-right: 20px;
+
+                    &:nth-child(3n){
+                        margin-right: 0;
+                    }
+
+                    &:nth-child(3n) ~ *{
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+// _BookDetails
+//▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+.book__details{
+    transition: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    padding: 20px 50px 20px 200px;
+    text-align: left;
+    background-color: white;
+    box-sizing: border-box;
+
+    h2{
+        font-size: 1.8em;
+
+        + p{
+            margin-top: 25px;
+        }
+    }
+
+    h6{
+        display: inline-block;
+
+        span{
+            display: block;
+            font-size: 0.9em;
+            font-weight: 400;
+            margin-top: 8px;
+        }
+    }
+
+    &--show{
+        transition: all 0.35s ease-in;
+        width: 700px;
+        height: 550px;
+        overflow: scroll;
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+//▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+// _BookSingle
+//▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+.book__single{
+    position: relative;
+    display: block;
+    height: 250px;
+
+    &--details{
+
+        img{
+            padding-top: 50px;
+            z-index: 2;
+        }
+    }
+}
+
+//▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+// _SingleBook
+//▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+.single__book{
+    position: relative;
+    transition: transform 0.35s ease-in-out, opacity 0.35s ease-in-out;
+    transform: translateY(150px);
+    opacity: 0;
+    margin-top: 150px;
+    margin-bottom: 50px;
+
+
+    &--loaded{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    &--img{
+        text-align: center;
+        margin-bottom: 50px;
+
+        img{
+            display: block;
+            height: 100%;
+            width: auto;
+            max-height: 500px;
+            margin: 0 auto;
+        }
+    }
+
+    &--details{
+        text-align: center;
+
+        h2{
+            color: white;
+
+            + p{
+                line-height: 35px;
+                max-width: 900px;
+                margin: 25px auto 0;
+            }
+        }
+
+        p{
+            color: white;
+        }
+
+        h6{
+            color: white;
+            border-bottom: 1px solid white;
+            padding-bottom: 10px;
+
+            + p{
+                margin-top: 15px;
+            }
+        }
+
+        ul{
+            list-style: none;
+            margin-top: 50px;
+
+            &:after{
+                content: '';
+                display: table;
+                clear: both;
+            }
+
+            li{
+                float: left;
+                width: 20%;
+                box-sizing: border-box;
+
+                &:not(:last-child){
+                    border-right: 1px solid white;
+                }
+            }
+        }
+    }
+
+    &--loading{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        list-style: none;
+        z-index: 6;
+
+        ul{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        li{
+            display: inline-block;
+            margin: 0 10px;
+            height: 50px;
+            width: 10px;
+            border: 3px solid white;
+            animation: loading 2s infinite;
+
+            &:nth-child(1n){
+                animation-delay: 0s;
+            }
+
+            &:nth-child(2n){
+                animation-delay: 0.2s;
+            }
+
+            &:nth-child(3n){
+                animation-delay: 0.4s;
+            }
+        }
+
+         &:before{
+            content: '';
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: black;
+            opacity: 0.8;
+        }
+    }
+
+    &--link{
+        transition: all 0.35s ease-in-out;
+        display: inline-block;
+        margin-top: 100px;
+        padding: 15px 25px;
+        background-color:#514A9D;
+        font-family: 'Roboto';
+        font-size: 1em;
+        color: white;
+
+        &:hover{
+            background-color: white;
+            color: #514A9D;
+        }
+    }
+}
+
+
+//▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+// _Pagination
+//▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+.pagination{
+    text-align: center;
+
+    &__prev,
+    &__next{
+        transition: all 0.35s ease-in-out;
+        display: inline-block;
+        min-width: 113px;
+        padding: 15px 25px;
+        margin: 0 10px;
+        font-family: 'Roboto';
+        font-size: 1em;
+        color: white;
+        vertical-align: middle;
+        background-color:#514A9D;
+
+        &:disabled{
+            opacity: 0.5;
+        }
+
+        &:hover{
+            background-color: white;
+            color: #514A9D;
+        }
+    }
+}
+
+
+@keyframes loading{
+     0%   { 
+        transform: scale(0.5);
+        background: #1488CC;
+    }
+    50%   { 
+        transform: scale(1);
+        background: white;
+    }
+    100% { 
+        transform: scale(0.5);
+        background: #1488CC;
+    }
+}
